@@ -6,7 +6,9 @@ object macaria {
 	var property caramelos = 0
 	
 	method capacidadSusto() {
-		return nivelIra + disfraces.sum{ disfraz => disfraz.nivelSusto() }
+		return nivelIra + disfraces.sum{
+			disfraz => disfraz.nivelSusto()
+		}
 	}
 	
 	method quitarDisfraz(_disfraz) {
@@ -22,9 +24,9 @@ object macaria {
 	}
 	
 	method dejarDeUsarMenosEfectivo() {
-		disfraces.drop(
+		disfraces.remove(
 			disfraces.min(
-				{ disfraz => disfraz.nivelDeSusto() }
+				{ disfraz => disfraz.nivelSusto() }
 			)
 		)
 	}
@@ -36,7 +38,9 @@ object pancracio {
 	var property caramelos = 0
 
 	method capacidadSusto() {
-		return nivelIra + disfraces.sum{ disfraz => disfraz.nivelSusto() }
+		return nivelIra + disfraces.sum{
+			disfraz => disfraz.nivelSusto()
+		}
 	}
 	
 	method quitarDisfraz(_quitarDisfraz) {
