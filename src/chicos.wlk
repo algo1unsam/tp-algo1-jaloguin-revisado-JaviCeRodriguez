@@ -61,7 +61,7 @@ object pancracio {
 // El chico inventado .
 
 object pedro {
-	var property disfraces = [ mascaraFrankenstein ]
+	var property disfraces = [ ]
 	var property caramelos = 0
 
 	method capacidadSusto() {
@@ -69,5 +69,13 @@ object pedro {
 	}
 	
 	method recibirCaramelos(_caramelos) {}
+	
+	method disfrazar(disfraz) {
+		disfraces.add(disfraz)
+	}
+	
+	method tirarTodosLosDisfraces() {
+		disfraces.clear()
+	}
 }
 

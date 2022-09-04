@@ -32,5 +32,31 @@ object legionDelTerror {
 	method recibirCaramelos(_caramelos) {
 		self.lider().recibirCaramelos(_caramelos)
 	}
+	
+	method normaSinRepetidos() {
+		
+	}
 }
 
+
+object barrio {
+	const chicos = [ ]
+	
+	method chicos(_chicos) {
+		_chicos.forEach{
+			chico => chicos.add(chico)
+		}
+	}
+	
+	method chicosConMasCaramelos(top) {
+		return chicos.sortedBy({
+			a, b => a.caramelos() > b.caramelos()
+		}).take(top)
+	}
+	
+	method algunoMuyAsustador() {
+		return chicos.any{
+			chico => chico.capacidadSusto() > 42
+		}
+	}
+}
