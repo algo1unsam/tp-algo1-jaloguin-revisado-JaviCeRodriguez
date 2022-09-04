@@ -19,15 +19,13 @@ object mascaraDracula {
 }
 
 object mascaraFrankenstein {
-	const tamanio = 22
-
 	method nivelSusto() {
-		return tamanio * 2
+		return 22
 	}
 }
 
 object mascaraPolitico {
-	const promesas = 2
+	const promesas = 5
 
 	method nivelSusto() {
 		return promesas * 2

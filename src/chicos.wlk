@@ -2,7 +2,7 @@ import elementos.*
 
 object macaria {
 	var nivelIra = 10
-	const property disfraces = [ ]
+	var property disfraces = [ ]
 	var property caramelos = 0
 	
 	method capacidadSusto() {
@@ -20,7 +20,7 @@ object macaria {
 	}
 	
 	method recibirCaramelos(_caramelos) {
-		caramelos += (_caramelos - _caramelos.div(4))
+		caramelos += (_caramelos * 0.75).div(1)
 	}
 	
 	method dejarDeUsarMenosEfectivo() {
@@ -61,6 +61,13 @@ object pancracio {
 // El chico inventado .
 
 object pedro {
+	var property disfraces = [ mascaraFrankenstein ]
+	var property caramelos = 0
 
+	method capacidadSusto() {
+		return 0
+	}
+	
+	method recibirCaramelos(_caramelos) {}
 }
 
